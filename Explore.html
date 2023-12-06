@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19b402f216.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <title>Explore page</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        html{
+          scroll-behavior: smooth;
+        }
+
+        h2{
+            color: #161f45;
+        }
+        p{
+            padding: 10px;
+        }
+        .navigation .nav-items a:hover{
+            color: #161f45;
+        }
+        .nav-bar .logo h1{
+            transform: translateY(0.6rem);        
+        }
+        .nav-bar .logo h3{
+            color: #161f45 ;
+        }
+        .nav-bar .logo h3::before,
+        .nav-bar .logo h3::after{
+            background-color: #fff;
+        }
+        /*------course-----*/
+        .course{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 150px;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        p{
+            color: #161f45;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+       .roww{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+       }
+       .course-col{
+        flex-basis: 31%;
+        background: #fff3f3;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+       }
+       .course h1{
+        color: #161f45
+       }
+       h3{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+       }
+       .course-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+       }
+       /*-----campus----*/
+       .campus{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+       }
+       .campus h1{
+        color: #161f45;
+       }
+       .campus-col{
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+       }
+       .campus-col img{
+        width: 100%;
+        display: block;
+       }
+       .layer{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+       }
+       .layer:hover{
+         background: rgba(29, 21, 78, 0.7);
+       }
+       .layer h3{
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+       }
+       .layer:hover h3{
+        bottom: 49%;
+        opacity: 1;
+       }
+       /*------ Testimonials---*/
+       .testimonials{
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+        text-align: center;
+       }
+       .testimonials h1{
+        color: #161f45
+       }
+       .testimonial-col{
+        flex-basis: 44%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: left;
+        background: #fff3f3;
+        padding: 25px;
+        cursor: pointer;
+        display: flex;
+       }
+       .testimonial-col img{
+        height: 40px;
+        margin-left: 5px;
+        margin-right: 30px;
+        border-radius: 50%;
+       }
+       .testimonial-col p{
+        padding: 0;
+       }
+       .testimonial-col h3{
+        margin-top: 15px;
+        text-align: left;
+       }
+       .testimonial-col .fa-star{
+        color: #f44336;
+       }
+       .cta{
+        margin: 100px auto;
+        width: 80%;
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/step4S.avif);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        text-align: center;
+        padding: 100px 0;
+       }
+       .cta h1{
+        color: #fff;
+        font-weight: 500;
+       }
+
+
+
+        @media(max-width: 700px){
+            .roww{
+                flex-direction: column;
+            }
+
+            .testimonial-col img{
+             margin-left: 0px;
+             margin-right: 15px;
+            
+            }
+            .cta{
+                margin-top: 20px;
+                margin-bottom: 50px;
+                padding: 50px 0;
+            }
+            .cta h1{
+                font-size: 25px;
+            }
+
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <header style="backdrop-filter: blur(20px) brightness(1.5); background: linear-gradient(to bottom,#161f45, #fff); border-bottom: 0.1px solid #fff;" >
+        <div class="nav-bar">
+            <a href="" class="logo"><div>
+                <h1>INDIVIDUAL</h1>
+                <h3>Instructor</h3>
+             </div></a>
+            <div class="navigation">
+                <div class="nav-items" id="sidemenu">
+                    <a href="#"><i class="fa-solid fa-xmark nav-close-btn "></i></a>
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <hr>
+                    <a href="#about-section"><i class="fa-solid fa-circle-info"></i>About</a>
+                    <hr>
+                    <a href="#" ><i class="fa-solid fa-star"></i>Our Services</a>
+                    <hr>
+                    <a href="#" style="color: #161f45 "><i class="fa-solid fa-globe"></i>Explore</a>
+                    <hr>
+                    <a href="#contact-section"><i class="fa-solid fa-phone "></i>Contact</a>
+
+                </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-bars nav-menu-btn"></i></a>
+            
+        </div>
+    </header>
+
+    <!------course section-->
+    <section class="course">
+        <h1>Services We Offer</h1>
+        <p> Various courses for which we offer tutor</p>
+
+        <div class="roww">
+            <div class="course-col">
+                <h3>Nursery - Class 8</h3>
+                <p>Providing personalized tutoring for Nursery to 8, our experienced tutors create engaging lessons to build strong foundations. We offer support with homework, foundational concepts, and exam preparation in a nurturing environment, fostering a love for learning in young minds.</p>
+            </div>
+
+            <div class="course-col">
+                <h3>Class 9 - 10</h3>
+                <p>Tailored for classes 9 and 10, our expert tutors guide students through curriculum challenges, offering comprehensive support in subjects like mathematics, science, and languages. Our focus is on in-depth subject knowledge and effective study strategies to help students excel academically.</p>
+            </div>
+
+            <div class="course-col">
+                <h3>Class 11 - 12</h3>
+                <p>Specializing in classes 11 and 12, our tutors provide targeted support for advanced topics and board exams. With a commitment to subject understanding and effective exam strategies, we empower students to navigate the challenges of higher-level education, ensuring they reach their full academic potential.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="campus">
+        <h1>Benefits Incudes</h1>
+        <p>It is always our pleasure to help you</p>
+
+        <div class="roww">
+            <div class="campus-col">
+                <img src="images/ExpImg1.jpg" alt="">
+                <div class="layer">
+                    <h3>Personalized Learning</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="images/ExpImg2.jpg" alt="">
+                <div class="layer">
+                    <h3>Convenience</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="images/ExpImg3.jpg" alt="">
+                <div class="layer">
+                    <h3>Academic Success</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="about-section">
+        <h1>What our Client Says</h1>
+        <p> Here are asome of the revies of our clients</p>
+            
+        <div class="roww">
+            <div class="testimonial-col">
+                <img src="images/regmain.jpg" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat quidem consequatur, mollitia enim fugit rerum animi in aliquam autem reiciendis magni suscipit hic molestias dolorum. Nihil quod ipsam sunt rem.</p>
+                    <h3>Aishwarya</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-col">
+                <img src="images/regmain.jpg" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat quidem consequatur, mollitia enim fugit rerum animi in aliquam autem reiciendis magni suscipit hic molestias dolorum. Nihil quod ipsam sunt rem.</p>
+                    <h3>Shami</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+        </div>
+         
+    </section>
+
+    <section class="cta">
+        <h1>Feel free to directly contact us using the contact details provided</h1>
+    </section>
+    <hr>
+
+    
+    <section class="contact" id="contact-section">
+        <div class="container">
+          <h1>Contact Us</h1>
+             <div class="contact-row">
+                 <div class="contact-left">
+                   
+                   <p> <i class="fa-solid fa-location-dot"></i> N-11/58 Ranipur Mehmoorganj, Varanasi 221010 </p>
+                   <p> <i class="fa-solid fa-square-phone"></i> 1234567890</p>
+                   <p> <i class="fa-solid fa-envelope"></i> aishwarya@gmail.com </p>
+                 </div>
+  
+                 <div class="contact-right">
+                  <h2>You can also join us on social platforms</h2>
+                  <div class="contact-social-icons" >
+                       <a href="#" target="_blank"> <i class="fab fa-facebook"></i> </a>
+                       <a href="#" target="_blank"> <i class="fab fa-twitter-square"></i> </a>
+                       <a href="#" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                       <a href="#" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+                  </div>
+                 </div>
+             </div>
+        </div>
+  
+    </section>
+    <div class="copyright">
+        <p>copyright@ aishwarya <i class="fa-solid fa-heart"></i> srivastava</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>

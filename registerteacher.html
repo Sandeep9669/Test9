@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19b402f216.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <title>Register Teacher</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        html{
+          scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background-color:  #fad493;
+        }
+        ::-webkit-scrollbar-thumb:hover{
+            background-color:  #fad493;
+        }
+        h2{
+            color: #f5ad30;
+        }
+        p{
+            padding: 10px;
+        }
+        .navigation .nav-items a:hover{
+            color:  rgb(152, 149, 149);
+            
+        }
+        .nav-bar .logo h3{
+            color: #f5ad30 ;
+        }
+        .nav-bar .logo h3::before,
+        .nav-bar .logo h3::after{
+            background-color: #fff;
+
+        }
+        .social-icons a i{
+            color: #f5ad30;
+        }
+        .social-icons a i:hover{
+            color: #fad493;
+        }
+        
+        .our-services{
+            margin-top: 60px;
+        }
+        .about-part1 h2{
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .row{
+            padding-bottom: 0;
+        }
+        
+        .our-services{
+            padding-bottom: 0;
+        }
+        .text-col-content{
+            padding-bottom: 10px;
+        }
+
+        /*==========form============*/
+        .hero{
+            padding-left: 70px;
+            padding-top: 0;
+        }
+       .form-box{
+        width: 450px;
+        height: 580px;
+        position: relative;
+        margin: 6% auto;
+        background: #fff;
+        padding-left: 5px;
+        padding-right: 0;
+        padding-top: 0;
+        
+        overflow: hidden;
+       }
+       .button-box{
+        width: 220px;
+        margin: 35px auto;
+        position: relative;
+        background: linear-gradient(to right, #fabb4f,#fad493 ,#fabb4f);
+        box-shadow: 0 0 20px 9px rgb(244, 231, 204);
+        border-radius: 30px;
+       }
+       .button-box h2{
+        color:#fff;
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        padding-left: 45px;
+        align-items: center;
+        font-weight: 400;
+       }
+       
+       #btn{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 110px;
+        height: 100%;
+        background: linear-gradient(to right, #3e4255, #acb0c6,#3e4255);
+        border-radius: 30px;
+        transition: .5s;
+       }
+       .social-icons{
+        text-align: center;
+       }
+       .input-group{
+       
+        top: 180px;
+        position: absolute;
+        width: 350px;
+        /* width: 100%; */
+        transition: .5s;
+       }
+       .input-field{
+        width: 100%;
+        padding: 10px 0;
+        margin: 5px 0;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #999;
+        outline: none;
+        background: transparent;
+       }
+       .submit-btn{
+        width: 85%;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        background: linear-gradient(to right, #fabb4f,#fad493 ,#fabb4f);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+        color: #fff;
+       }
+       .check-box{
+        margin: 30px 10px 30px 0;
+       }
+       span{
+        color: #777;
+        font-size: 12px;
+        bottom: 68px;
+        position: absolute;
+       }
+       #login{
+        left: 50px;
+       }
+
+       .about-part2S{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+       }
+
+       .about-part2S .stepsS{
+        width: 100%;
+        padding: 0 40px ;
+       }
+       .about-part2S .stepsS h1{
+        color: #f5ad30;
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 20px;
+        font-style: 'Poppins', sans-serif;
+       }
+
+       .about-part2S .stepsS img{
+        width: 100%;
+        border-radius: 50%;
+       }
+       .about-part2S .stepsS p{
+        font-size: 1.2em;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+       }
+       .about-part2S .stepsS img:hover{
+        cursor: pointer;
+        transform: translateY(-10px);
+        transition: transform 0.5s;
+       }
+        /*==========faq============*/
+        .faq{
+          padding: 10px 12%;
+          text-align: center;
+          font-size: 18px;
+        }
+        .faq h2{
+            padding-top: 20px;
+           font-weight: 500;
+           font-size: 40px;
+           font-family: 'Poppins', sans-serif;
+        }
+        .accordion{
+           margin: 60px auto;
+           width: 100%;
+           max-width: 750px;
+        }
+        .accordion li{
+          list-style: none;
+          width: 100%;
+          padding: 5px;
+        }
+        .accordion li label{
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          font-size: 18px;
+          font-weight: 500;
+          background: #fecc77;
+          margin-top: 2px;
+          cursor: pointer;
+          position: relative;
+        }
+        label::after{
+           content: '+';
+           font-size: 34px;
+           position: absolute;
+           right: 20px;
+           transition: transform 0.5s;
+        }
+        input[type="radio"]{
+          display: none;
+        }
+        .accordion .content{
+           margin-top: 2px;
+           background: #fff;
+           text-align: left;
+           padding: 0 20px;
+           max-height: 0;
+           overflow: hidden;
+           transition: max-height 0.5s,padding 0.5s;
+        }
+        .accordion .content p{
+            color: #f5ad30 ;
+        }
+
+        .accordion input[type="radio"]:checked + label + .content{
+           max-height: 600px;
+           padding: 30px 20px;
+        } 
+        .accordion input[type="radio"]:checked + label::after{
+           transform: rotate(135deg);
+        }
+        .faq .email-signup{
+           max-width: 600px;
+           margin: 20px auto 60px;
+        }
+        .faq small{
+           font-size: 13px;
+        }
+
+        /*==========contact============*/
+
+       
+       .contact-left p i{
+        color:  #f5ad30 ;
+       }
+
+       .contact-social-icons a{
+        color:  #f5ad30 ; 
+       }
+       .contact-social-icons a i:hover{
+          color: #fad493;
+       }
+       .contact-right h2{
+          color:  #f5ad30;
+       }
+       .copyright{
+         background:#f5ad30 ;
+       }
+       .copyright i{
+        color: #fad493;
+       }
+
+
+       @media screen and (max-width:1100px){
+           
+           .text-col{
+               display: flex;
+               flex-basis: 100%;
+           }
+            
+           .text-col .img-col img {
+              
+               height: 250px;
+               width: 250px;
+           }
+           .hero{
+               display: flex;
+               flex-basis: 100%;
+               padding:  0 40px ;
+           }
+           
+           .text-col-content{
+               padding: 10px;
+               font-size: medium;
+           }
+
+           .about-part1 h2{
+               font-size: 30px;
+            }
+            .about-part1 p{
+                font-size: 15px;
+            }
+            .about-part2S{
+            display: flex;
+            padding-top: 0;
+            }
+
+           .about-part2S .stepsS{ 
+              padding: 0 20px ;
+            }
+            .about-part2S .stepsS img{
+                width: 200px;
+                height: 200px;
+            }
+            .about-part2S .stepsS h1{
+                font-size: 20px;
+
+            }
+            .about-part2S .stepsS p{
+                font-size: 15px;
+            }
+           
+
+        }
+
+        @media screen and (max-width:785px){
+           
+            .our-services{
+               
+                padding-bottom: 0;
+                margin-bottom: 0;
+                padding-right: 30px;
+               
+            }
+            .our-services .row{
+              margin-left: 0px;
+              padding-right: 20px;
+            }
+           
+           
+            .row{
+                padding-bottom: 0;
+                padding-left: 0;
+              
+               
+            }
+            .row:nth-child(1){
+                flex-direction: row-reverse;
+            }
+            
+            .row .text-col{
+                display: inline;
+                margin-left: 100px;
+
+               
+               
+            }
+            .text-col-content p{
+                font-size: 18px;
+              
+            }
+            
+            .row .img-col img{
+                height: 280px;
+                width: 340px;
+            }
+            .hero{
+              margin-left: 20px;
+              padding-right: 0;
+             
+            }
+            .hero .form-box{
+                width: 340px;
+                height: 580px;
+                
+            }
+
+            .hero .form-box .input-group{
+              padding-right: 110px;
+            
+            }
+            .about{
+              padding: 0;
+            }
+            
+           
+
+            .about-part1{
+                padding-bottom:20px;
+                margin-bottom: 0;
+            }
+            .about-part1 p{
+                padding-bottom: 0;
+            }
+            
+            .about-part2S{
+                display: inline;
+                padding-bottom: 30px;
+                
+               
+            }
+            .about-part2S .stepsS{
+               justify-content: center;
+               padding-bottom: 20px;
+               align-items:center;
+              
+            }
+            .about-part2S .stepsS h1{
+                font-size: 22px;
+                padding-bottom: 10px;
+                justify-content: center;
+                text-align: center;
+            }
+            .about-part2S .stepsS img{ 
+                height: 200px;
+                width: 200px;  
+            }
+            
+            .about-part2S .stepsS p{
+                padding-top: 0;
+                font-size: 18px;
+            }
+            .imgS{
+                margin-left: 80px;
+            }
+            
+            
+           
+            .faq h2{
+                font-size: 30px;
+                font-weight: 600;
+                padding-top: 0;
+            }
+            .accordion li label{
+                justify-content: center;
+                font-size: 15px;
+                width: 108%;
+              
+            }
+            .accordion .content p{
+                font-size: 17px;
+            }
+           
+        }  
+        @media screen and (max-width:600px){
+            /* .stepsS img{ */
+                /* margin-left: 50%; */
+                /* transform: translateX(-50%); */
+            /* } */
+            .our-services .row{
+              margin-left: 18px;
+              
+            }
+            .row .text-col{
+                margin: 0;
+            }
+            .hero{
+                margin: 0;
+                padding: 0;
+            }
+            
+        }
+        @media screen and (max-width:400px) {
+            .row{
+                margin-left: 1rem;
+            }                  
+        }
+      
+    </style>
+</head>
+<body>
+    <header style="backdrop-filter: blur(20px) brightness(1.5); background: linear-gradient(to bottom,#df920d, #fff); border-bottom: 0.1px solid #fff;" >
+        <div class="nav-bar">
+            <a href="" class="logo"><div>
+                <h1>INDIVIDUAL</h1>
+                <h3>Instructor</h3>
+             </div></a>
+            <div class="navigation">
+                <div class="nav-items" id="sidemenu">
+                    <a href="#"><i class="fa-solid fa-xmark nav-close-btn "></i></a>
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <hr>
+                    <a href="#about-section"><i class="fa-solid fa-circle-info"></i>About</a>
+                    <hr>
+                    <a href="#our-services-section" style="color: #df920d "><i class="fa-solid fa-star"></i>Our Services</a>
+                    <hr>
+                    <a href="Explore.html"><i class="fa-solid fa-globe"></i>Explore</a>
+                    <hr>
+                    <a href="#contact-section"><i class="fa-solid fa-phone "></i>Contact</a>
+
+                </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-bars nav-menu-btn"></i></a>
+            
+        </div>
+    </header>
+
+    <section   class="our-services" id="our-services-section">
+        <div class="row">
+            <div class="text-col">
+              <div class="text-col-content">
+                <h2>Register as a Teacher.</h2>
+              <p> Become a tutor and inspire students on their learning journey.</p>
+              <p>Register now to share your knowledge and make a lasting impact.</p>
+              </div>
+
+              <div class="img-col">
+                <img src="images/regmain.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="hero">
+                <div class="form-box">
+                    <div class="button-box">
+                       
+                       <h2>Register </h2>
+                    </div>
+
+                    <div class="contact-social-icons social-icons">
+                        <a href="#" target="_blank"> <i class="fab fa-facebook"></i> </a>
+                        <a href="#" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#" target="_blank"> <i class="fab fa-twitter-square"></i> </a>
+                    </div>
+
+                    <form id="login" class="input-group">
+                        <input type="text" class="input-field" placeholder="Full Name" required>
+                        <input type="email" class="input-field" placeholder="Email Id" required>
+                        <input type="number" class="input-field" placeholder="Phone Number" required>
+                        <input type="text" class="input-field" placeholder="Subjects you can teach" required>
+                       
+                        <input type="text" class="input-field" placeholder="Classes" required>
+                        <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </section>
+
+    <section class="about section" id="about-section">
+        <div  class="about-part1">
+            <h2>How it Works??</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quas ducimus nisi natus nostrum sunt ea nemo repellat aliquam voluptatum odit voluptatibus iste deserunt eos ipsum quam temporibus ab atque.</p>
+        </div>
+
+        <div class="about-part2S">
+           
+            <div class="stepsS">
+                <h1>Step 1</h1>
+                <img src="images/regte1.avif" alt="" class="imgS">
+                <p>Teachers should self-register on the website or contact by calling for submitting qualifications and availability.</p>
+            </div>
+            
+            <div class="stepsS">
+                <h1>Step 2</h1>
+                <img src="images/regte2.avif" alt="" class="imgS">
+                <p>We will assigns students based on registered details and will contact you as soon as possible.</p>
+            </div>
+
+            <div class="stepsS">
+                <h1>Step 3</h1>
+                <img src="images/new.png" alt="" class="imgS">
+                <p> Facilitates direct connection, linking teachers with assigned students for home tuition.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <ul class="accordion">
+                <li>
+                    <input type="radio" name="accordion" id="first">
+                    <label for="first">How to register as a home tutor?</label>
+                    
+                    <div class="content">
+                      
+                        <p>The registration form is provided on this page, you can fill all the reqired details to register as a teacher.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="second">
+                    <label for="second">How much can I earn as a home tutor?</label>
+                    <div class="content">
+                        <p>Your income as a home tutor depends on various number of factors, including geographic location, your experience and qualification, the number of subjects you opt, the number of hours you are spending teaching, the number of students you teach and the number/level of academic subjects. On an average our premium teachers make between 8K to 30K per month.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="third">
+                    <label for="third">Is tutor registration free?</label>
+                    <div class="content">
+                        <p>Yes, the online tutor registration is absolutely free of cost.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="fourth">
+                    <label for="fourth">Where can I find students for tution?</label>
+                    <div class="content">
+                        <p>After registration you will have to wait, We will contact you as per the vacancy and requirement.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="fifth">
+                    <label for="fifth">What if I have some confusion?</label>
+                    <div class="content">
+                        <p>You can directly contact us at : 123456789 / 234569512 or can mail us at: aish@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="sixth">
+                    <label for="sixth">Will I have to re-register periodically?</label>
+                    <div class="content">
+                        <p> No, your details will be permanently saved with us. However, you can contact us in case of any updation. </p>
+                    </div>
+                </li>
+            </ul>
+           
+        </div>
+        
+    </section>
+    <hr>
+
+    <section class="contact" id="contact-section">
+        <div class="container">
+          <h1>Contact Us</h1>
+             <div class="contact-row">
+                 <div class="contact-left">
+                   
+                   <p> <i class="fa-solid fa-location-dot"></i> N-11/58 Ranipur Mehmoorganj, Varanasi 221010 </p>
+                   <p> <i class="fa-solid fa-square-phone"></i> 1234567890</p>
+                   <p> <i class="fa-solid fa-envelope"></i> aishwarya@gmail.com </p>
+                 </div>
+  
+                 <div class="contact-right">
+                  <h2>You can also join us on social platforms</h2>
+                  <div class="contact-social-icons" >
+                       <a href="#" target="_blank"> <i class="fab fa-facebook"></i> </a>
+                       <a href="#" target="_blank"> <i class="fab fa-twitter-square"></i> </a>
+                       <a href="#" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                       <a href="#" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+                  </div>
+                 </div>
+             </div>
+        </div>
+  
+    </section>
+
+    <div class="copyright">
+        <p>copyright@ aishwarya <i class="fa-solid fa-heart"></i> srivastava</p>
+    </div>
+
+
+    <script src="swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+
+
+    
+</body>
+</html>
